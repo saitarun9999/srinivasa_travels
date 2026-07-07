@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Tempo Traveller silhouette">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06294f"/>
+      <stop offset="1" stop-color="#0b4ea2"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f8fd"/>
+      <stop offset="1" stop-color="#c9d9ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <ellipse cx="400" cy="396" rx="330" ry="18" fill="#041d3a" opacity="0.55"/>
+  <g>
+    <path d="M104 356 L104 240 C104 208 122 190 156 188 L560 186 C610 186 646 200 668 234 L692 274 C700 288 702 302 702 320 L702 356 C702 370 694 377 680 377 L634 377 A46 46 0 0 0 542 377 L266 377 A46 46 0 0 0 174 377 L126 377 C112 377 104 370 104 356 Z" fill="url(#body)"/>
+    <rect x="130" y="210" width="92" height="58" rx="8" fill="#0b4ea2" opacity="0.85"/>
+    <rect x="238" y="210" width="92" height="58" rx="8" fill="#0b4ea2" opacity="0.85"/>
+    <rect x="346" y="210" width="92" height="58" rx="8" fill="#0b4ea2" opacity="0.85"/>
+    <rect x="454" y="210" width="92" height="58" rx="8" fill="#0b4ea2" opacity="0.85"/>
+    <path d="M562 210 C598 212 622 226 638 252 L662 290 L562 290 Z" fill="#0b4ea2" opacity="0.85"/>
+    <circle cx="220" cy="377" r="40" fill="#0f2137"/>
+    <circle cx="220" cy="377" r="20" fill="#c9d9ee"/>
+    <circle cx="588" cy="377" r="40" fill="#0f2137"/>
+    <circle cx="588" cy="377" r="20" fill="#c9d9ee"/>
+    <rect x="104" y="300" width="598" height="7" rx="3.5" fill="#f4b400" opacity="0.9"/>
+  </g>
+  <rect x="60" y="452" width="120" height="3" rx="1.5" fill="#f4b400"/>
+  <rect x="60" y="460" width="72" height="3" rx="1.5" fill="#f4b400" opacity="0.7"/>
+</svg>

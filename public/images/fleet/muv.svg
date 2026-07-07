@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="MUV silhouette">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06294f"/>
+      <stop offset="1" stop-color="#0b4ea2"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f8fd"/>
+      <stop offset="1" stop-color="#c9d9ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <ellipse cx="400" cy="392" rx="310" ry="18" fill="#041d3a" opacity="0.55"/>
+  <g>
+    <path d="M112 352 C115 326 135 312 185 306 L215 300 C245 252 290 228 375 226 L520 226 C575 226 620 250 645 300 L655 306 C680 312 690 328 690 352 C690 366 682 373 668 373 L622 373 A46 46 0 0 0 530 373 L268 373 A46 46 0 0 0 176 373 L134 373 C120 373 111 366 112 352 Z" fill="url(#body)"/>
+    <path d="M262 296 C286 254 322 240 372 240 L372 296 Z" fill="#0b4ea2" opacity="0.85"/>
+    <rect x="388" y="240" width="105" height="56" rx="8" fill="#0b4ea2" opacity="0.85"/>
+    <path d="M508 240 C560 242 600 262 622 296 L508 296 Z" fill="#0b4ea2" opacity="0.85"/>
+    <circle cx="222" cy="373" r="40" fill="#0f2137"/>
+    <circle cx="222" cy="373" r="20" fill="#c9d9ee"/>
+    <circle cx="576" cy="373" r="40" fill="#0f2137"/>
+    <circle cx="576" cy="373" r="20" fill="#c9d9ee"/>
+    <rect x="112" y="336" width="24" height="6" rx="3" fill="#f4b400"/>
+  </g>
+  <rect x="60" y="452" width="120" height="3" rx="1.5" fill="#f4b400"/>
+  <rect x="60" y="460" width="72" height="3" rx="1.5" fill="#f4b400" opacity="0.7"/>
+</svg>

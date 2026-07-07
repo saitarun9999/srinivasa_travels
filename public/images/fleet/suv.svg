@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="SUV silhouette">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06294f"/>
+      <stop offset="1" stop-color="#0b4ea2"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f8fd"/>
+      <stop offset="1" stop-color="#c9d9ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <ellipse cx="400" cy="392" rx="315" ry="18" fill="#041d3a" opacity="0.55"/>
+  <g>
+    <path d="M108 348 C110 322 130 308 178 302 L205 296 C232 244 275 218 360 214 L540 216 C600 218 640 246 660 296 L668 302 C686 310 694 326 694 348 C694 364 685 372 670 372 L626 372 A48 48 0 0 0 530 372 L270 372 A48 48 0 0 0 174 372 L132 372 C116 372 107 364 108 348 Z" fill="url(#body)"/>
+    <path d="M252 290 C276 244 312 230 360 228 L360 290 Z" fill="#0b4ea2" opacity="0.85"/>
+    <rect x="376" y="228" width="112" height="62" rx="8" fill="#0b4ea2" opacity="0.85"/>
+    <path d="M504 228 C568 230 612 254 636 290 L504 290 Z" fill="#0b4ea2" opacity="0.85"/>
+    <circle cx="222" cy="372" r="44" fill="#0f2137"/>
+    <circle cx="222" cy="372" r="22" fill="#c9d9ee"/>
+    <circle cx="578" cy="372" r="44" fill="#0f2137"/>
+    <circle cx="578" cy="372" r="22" fill="#c9d9ee"/>
+    <rect x="108" y="332" width="26" height="7" rx="3.5" fill="#f4b400"/>
+    <rect x="150" y="214" width="120" height="6" rx="3" fill="#c9d9ee" opacity="0.5" transform="rotate(-8 150 214)"/>
+  </g>
+  <rect x="60" y="452" width="120" height="3" rx="1.5" fill="#f4b400"/>
+  <rect x="60" y="460" width="72" height="3" rx="1.5" fill="#f4b400" opacity="0.7"/>
+</svg>
