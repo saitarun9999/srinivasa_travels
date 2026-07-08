@@ -4,7 +4,7 @@ export const site = {
   tagline: "Chauffeur-driven car rentals in Hyderabad",
   description:
     "Premium chauffeur-driven car rentals in Hyderabad — airport transfers, local rentals, outstation cabs, corporate and wedding travel. Transparent pricing, verified chauffeurs, 24×7 support.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.srinivasatravels.in",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.srinivasatravels.com",
   phone: process.env.NEXT_PUBLIC_PHONE ?? "+919059288288",
   phoneDisplay: process.env.NEXT_PUBLIC_PHONE_DISPLAY ?? "+91 90592 88288",
   phoneAlt: "+919948278756",
