@@ -106,8 +106,16 @@ export default async function Footer() {
                   {site.phoneDisplay}
                 </a>
                 <br />
+                <a href={`tel:${site.phoneAlt}`} className="hover:text-white">
+                  {site.phoneAltDisplay}
+                </a>
+                <br />
                 <a href={`mailto:${site.email}`} className="hover:text-white">
                   {site.email}
+                </a>
+                <br />
+                <a href={`mailto:${site.emailAlt}`} className="hover:text-white">
+                  {site.emailAlt}
                 </a>
               </p>
               <p className="text-white/50">{site.hours}</p>

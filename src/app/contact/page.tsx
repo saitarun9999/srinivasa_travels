@@ -23,14 +23,14 @@ const channels = [
   },
   {
     title: "Phone",
-    detail: `${site.phoneDisplay} · a person answers, 24×7`,
+    detail: `${site.phoneDisplay} / ${site.phoneAltDisplay} · a person answers, 24×7`,
     action: "Call the desk",
     href: `tel:${site.phone}`,
     external: true,
   },
   {
     title: "Email",
-    detail: `${site.email} · for corporate accounts and itineraries`,
+    detail: `${site.email} · also ${site.emailAlt}`,
     action: "Write to us",
     href: `mailto:${site.email}`,
     external: true,
