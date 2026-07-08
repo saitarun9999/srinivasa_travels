@@ -10,8 +10,7 @@ export const site = {
   phoneAlt: "+919948278756",
   phoneAltDisplay: "+91 99482 78756",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP ?? "919059288288",
-  email: "smartservice.management@gmail.com",
-  emailAlt: "contact@smartservicesmanagement.com",
+  email: "srinivasatipamula@gmail.com",
   address: {
     street: "9-1-44, Road No.06, Sri Venkateshwara Colony",
     locality: "Shivanarayanapuram, Badangpet",

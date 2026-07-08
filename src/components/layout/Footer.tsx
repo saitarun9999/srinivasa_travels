@@ -96,9 +96,7 @@ export default async function Footer() {
             </p>
             <address className="space-y-3 text-sm not-italic leading-relaxed text-white/70">
               <p>
-                {site.address.street}
-                <br />
-                {site.address.locality}, {site.address.city}{" "}
+                {site.address.street} {site.address.locality}, {site.address.city}{" "}
                 {site.address.postalCode}
               </p>
               <p>
@@ -112,10 +110,6 @@ export default async function Footer() {
                 <br />
                 <a href={`mailto:${site.email}`} className="hover:text-white">
                   {site.email}
-                </a>
-                <br />
-                <a href={`mailto:${site.emailAlt}`} className="hover:text-white">
-                  {site.emailAlt}
                 </a>
               </p>
               <p className="text-white/50">{site.hours}</p>

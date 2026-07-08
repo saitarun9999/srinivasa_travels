@@ -30,7 +30,7 @@ const channels = [
   },
   {
     title: "Email",
-    detail: `${site.email} · also ${site.emailAlt}`,
+    detail: `${site.email} · for corporate accounts and itineraries`,
     action: "Write to us",
     href: `mailto:${site.email}`,
     external: true,
