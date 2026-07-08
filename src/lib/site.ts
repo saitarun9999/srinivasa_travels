@@ -20,11 +20,7 @@ export const site = {
     country: "IN",
   },
   hours: "Open 24 hours, all days",
-  mapUrl:
-    "https://www.google.com/maps/search/?api=1&query=" +
-    encodeURIComponent(
-      "9-1-44, Road No.06, Sri Venkateshwara Colony, Shivanarayanapuram, Badangpet, Hyderabad 500058",
-    ),
+  mapUrl: "https://maps.app.goo.gl/baRzHDcTgGv8zoDq6",
   social: {
     instagram: "https://instagram.com/srinivasatravels",
     facebook: "https://facebook.com/srinivasatravels",
