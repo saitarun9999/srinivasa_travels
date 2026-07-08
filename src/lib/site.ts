@@ -20,7 +20,11 @@ export const site = {
     country: "IN",
   },
   hours: "Open 24 hours, all days",
-  mapUrl: "https://maps.google.com/?q=Srinivasa+Travels+Hyderabad",
+  mapUrl:
+    "https://www.google.com/maps/search/?api=1&query=" +
+    encodeURIComponent(
+      "9-1-44, Road No.06, Sri Venkateshwara Colony, Shivanarayanapuram, Badangpet, Hyderabad 500058",
+    ),
   social: {
     instagram: "https://instagram.com/srinivasatravels",
     facebook: "https://facebook.com/srinivasatravels",
