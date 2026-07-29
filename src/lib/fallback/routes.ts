@@ -14,8 +14,6 @@ export const routes: RouteInfo[] = [
       "Our Tirupati drivers make this run weekly — they know the reliable midnight dhabas near Kurnool, the fuel stops that stay open, and the timing needed at the Alipiri check post. For senior citizens we plan an extra rest halt and can arrange wheelchairs at Tirumala on request.",
       "A typical round trip is billed for two days at the vehicle's per-km rate with driver allowance; the exact quote — including tolls and the Andhra Pradesh permit — is itemised on WhatsApp before you confirm.",
     ],
-    oneWayFareFrom: 7500,
-    roundTripFareFrom: 13900,
     attractions: [
       { name: "Sri Venkateswara Temple, Tirumala", note: "The destination itself — plan darshan slots before travel" },
       { name: "Sri Padmavathi Ammavari Temple", note: "In Tiruchanur, 5 km from Tirupati — customarily visited after Tirumala" },
@@ -28,7 +26,7 @@ export const routes: RouteInfo[] = [
       {
         question: "How much does a Hyderabad to Tirupati cab cost?",
         answer:
-          "A round trip starts at around ₹13,900 in a sedan and ₹17,000–₹20,000 in an Innova Crysta, depending on days and total kilometres. The quote itemises per-km fare, driver allowance, tolls and the AP permit before you book.",
+          "It depends on the vehicle, the number of days and total kilometres, so we quote each trip individually. Message us on WhatsApp with your dates and group size and you get an itemised quote — per-km fare, driver allowance, tolls and the AP permit — before you book.",
       },
       {
         question: "What is the best time to leave Hyderabad for Tirupati darshan?",
@@ -54,8 +52,6 @@ export const routes: RouteInfo[] = [
       "Hyderabad to Vijayawada is one of the easiest outstation drives in the region — about 275 km on NH-65, most of it four-laned, done comfortably in 5 to 6 hours with one break. It is genuinely day-return feasible: leave at 6 AM, finish a darshan or business meeting, and be home for a late dinner.",
       "The corridor rewards small detours: the Undavalli rock-cut caves, the Amaravati stupa, and Kondapalli fort all sit within a short reach of the highway. Tell your chauffeur what interests you and the day plans itself.",
     ],
-    oneWayFareFrom: 4200,
-    roundTripFareFrom: 7300,
     attractions: [
       { name: "Kanaka Durga Temple", note: "Vijayawada's presiding deity, on Indrakeeladri hill above the Krishna" },
       { name: "Undavalli Caves", note: "4th-century rock-cut caves just across the river" },
@@ -68,12 +64,12 @@ export const routes: RouteInfo[] = [
       {
         question: "Can Hyderabad to Vijayawada be done as a day trip by cab?",
         answer:
-          "Yes — with a 6 AM start you get 5–6 usable hours in Vijayawada and return by 10–11 PM. A round trip in a sedan starts around ₹7,300 including driver allowance.",
+          "Yes — with a 6 AM start you get 5–6 usable hours in Vijayawada and return by 10–11 PM. Share your date on WhatsApp and we send an itemised day-trip quote including driver allowance.",
       },
       {
         question: "Is a one-way cab available on this route?",
         answer:
-          "Yes, Vijayawada is one of our fixed-fare one-way corridors — from around ₹4,200 in a sedan. Share your date on WhatsApp for the current rate.",
+          "Yes, Vijayawada is one of our fixed-fare one-way corridors — the fare is confirmed before you travel rather than metered on the day. Share your date on WhatsApp for the current rate.",
       },
     ],
   },
@@ -89,8 +85,6 @@ export const routes: RouteInfo[] = [
       "Hyderabad to Bangalore on NH-44 is one of India's better long-distance drives: 575 km of largely excellent four-to-six-lane highway via Jadcherla, Kurnool and Anantapur, done in 8–9 hours with breaks. It is a popular choice over flying when you are moving with family, luggage or a schedule that airlines don't respect.",
       "One-way drops are common on this corridor — you pay a fixed fare rather than round-trip kilometres. For overnight runs we assign two-driver setups on request for non-stop travel.",
     ],
-    oneWayFareFrom: 8500,
-    roundTripFareFrom: 14500,
     attractions: [
       { name: "Kurnool — Konda Reddy Fort", note: "A natural midpoint break with history attached" },
       { name: "Anantapur ISKCON", note: "A calm, modern temple stop on the second half" },
@@ -107,7 +101,7 @@ export const routes: RouteInfo[] = [
       {
         question: "What does a one-way Hyderabad to Bangalore cab cost?",
         answer:
-          "Fixed one-way fares start around ₹8,500 in a sedan and ₹12,500 in an Innova, including tolls quoted up front. Round trips are billed per-km across the days of travel.",
+          "One-way runs are quoted as a fixed fare — a single amount including tolls, confirmed on WhatsApp before you travel. Round trips are billed per-km across the days of travel. Rates move with fuel and season, so ask for a current quote with your date and vehicle.",
       },
     ],
   },
@@ -123,8 +117,6 @@ export const routes: RouteInfo[] = [
       "The Srisailam run is the most scenic short pilgrimage from Hyderabad: 213 km that end with a winding descent through the Nallamala forest and tiger reserve to the Krishna river gorge. The forest check gates operate on fixed timings, so departure planning matters more here than on any other route — our drivers time it so you neither race the gate nor wait an hour at it.",
       "Mallikarjuna Jyotirlinga draws the devout year-round, but the dam viewpoints, the ropeway to Pathala Ganga and the sheer drive make it worthwhile even for the non-religious. Weekends around festivals get crowded; a weekday trip is a different, calmer experience.",
     ],
-    oneWayFareFrom: 3800,
-    roundTripFareFrom: 6500,
     attractions: [
       { name: "Mallikarjuna Swamy Temple", note: "One of the twelve Jyotirlingas, on the banks of the Krishna" },
       { name: "Srisailam Dam", note: "Massive gravity dam across the Krishna gorge — best after good monsoons" },

@@ -8,9 +8,9 @@ import { getRoutes } from "@/lib/data";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Outstation Cab Routes from Hyderabad — Fares, Distances & Timings",
+  title: "Outstation Cab Routes from Hyderabad — Distances & Timings",
   description:
-    "Popular chauffeur-driven routes from Hyderabad: Tirupati, Vijayawada, Bangalore and Srisailam. Distances, journey times, transparent fares and route tips from drivers who run them weekly.",
+    "Popular chauffeur-driven routes from Hyderabad: Tirupati, Vijayawada, Bangalore and Srisailam. Distances, journey times and route tips from drivers who run them weekly — fares quoted on WhatsApp.",
   path: "/routes",
 });
 
@@ -22,7 +22,7 @@ export default async function RoutesPage() {
       <PageHero
         eyebrow="Routes"
         title="Roads we know by heart"
-        lede="Every route below is one our drivers run week after week — the fares, timings and tips come from the road, not a spreadsheet."
+        lede="Every route below is one our drivers run week after week — the timings, stops and tips come from the road, not a spreadsheet. Fares are quoted per trip on WhatsApp."
       >
         <Breadcrumbs
           items={[

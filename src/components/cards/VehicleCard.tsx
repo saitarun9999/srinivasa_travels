@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Vehicle } from "@/types";
-import { formatINR, whatsappLink } from "@/lib/site";
+import { whatsappLink } from "@/lib/site";
 
 export default function VehicleCard({ vehicle }: { vehicle: Vehicle }) {
   return (
@@ -59,12 +59,14 @@ export default function VehicleCard({ vehicle }: { vehicle: Vehicle }) {
           </div>
         </dl>
 
-        <div className="mt-5 flex items-end justify-between border-t border-line pt-4">
+        <div className="mt-5 flex items-end justify-between gap-3 border-t border-line pt-4">
           <div>
-            <p className="text-xs text-ink-faint">Outstation from</p>
-            <p className="font-display text-xl font-semibold text-primary">
-              {formatINR(vehicle.pricePerKm)}
-              <span className="text-sm font-medium text-ink-faint">/km</span>
+            <p className="text-xs text-ink-faint">Fare</p>
+            <p className="font-display text-base font-semibold text-primary">
+              On request
+              <span className="block text-xs font-medium text-ink-faint">
+                Quoted on WhatsApp
+              </span>
             </p>
           </div>
           <div className="flex gap-2">

@@ -10,7 +10,6 @@ import FaqSection from "@/sections/FaqSection";
 import ContactCta from "@/sections/ContactCta";
 import { getRoute, getRoutes, getVehiclesBySlugs } from "@/lib/data";
 import { buildMetadata } from "@/lib/seo";
-import { formatINR } from "@/lib/site";
 
 type Params = { slug: string };
 
@@ -27,8 +26,8 @@ export async function generateMetadata({
   const route = await getRoute(slug);
   if (!route) return {};
   return buildMetadata({
-    title: `${route.from} to ${route.to} Cab — Fare from ${formatINR(route.roundTripFareFrom)}`,
-    description: `Book a chauffeur-driven cab from ${route.from} to ${route.to}: ${route.distanceKm} km, ${route.duration}. Round trips from ${formatINR(route.roundTripFareFrom)}, itemised fares, experienced drivers.`,
+    title: `${route.from} to ${route.to} Cab — Distance, Timing & Fare Quote`,
+    description: `Book a chauffeur-driven cab from ${route.from} to ${route.to}: ${route.distanceKm} km, ${route.duration}. One-way and round trips quoted on WhatsApp with fares itemised, experienced drivers.`,
     path: `/routes/${route.slug}`,
     keywords: [
       `${route.from} to ${route.to} cab`,
@@ -52,8 +51,8 @@ export default async function RoutePage({
   const quickFacts = [
     { label: "Distance", value: `${route.distanceKm} km` },
     { label: "Journey time", value: route.duration },
-    { label: "One way from", value: formatINR(route.oneWayFareFrom) },
-    { label: "Round trip from", value: formatINR(route.roundTripFareFrom) },
+    { label: "Trip types", value: "One way / return" },
+    { label: "Fare", value: "On request" },
   ];
 
   return (
@@ -82,7 +81,7 @@ export default async function RoutePage({
               <dt className="text-[11px] uppercase tracking-wider text-white/55">
                 {f.label}
               </dt>
-              <dd className="mt-1 font-display text-lg font-semibold text-accent">
+              <dd className="mt-1 font-display text-base font-semibold text-accent">
                 {f.value}
               </dd>
             </div>

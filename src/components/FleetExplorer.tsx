@@ -11,13 +11,6 @@ const seatBands = [
   { label: "8+", test: (s: number) => s >= 8 },
 ];
 
-const priceBands = [
-  { label: "Any price", test: () => true },
-  { label: "Under ₹15/km", test: (p: number) => p < 15 },
-  { label: "₹15 – ₹25/km", test: (p: number) => p >= 15 && p <= 25 },
-  { label: "Above ₹25/km", test: (p: number) => p > 25 },
-];
-
 const selectCls =
   "rounded-btn border border-line bg-white px-4 py-2.5 text-sm text-ink focus:border-primary focus:outline-none";
 
@@ -35,7 +28,6 @@ export default function FleetExplorer({ vehicles }: { vehicles: Vehicle[] }) {
   const [seatBand, setSeatBand] = useState(0);
   const [transmission, setTransmission] = useState("Any transmission");
   const [fuel, setFuel] = useState("Any fuel");
-  const [priceBand, setPriceBand] = useState(0);
 
   const filtered = vehicles.filter(
     (v) =>
@@ -43,8 +35,7 @@ export default function FleetExplorer({ vehicles }: { vehicles: Vehicle[] }) {
       seatBands[seatBand].test(v.seats) &&
       (transmission === "Any transmission" ||
         v.transmission === transmission) &&
-      (fuel === "Any fuel" || v.fuel === fuel) &&
-      priceBands[priceBand].test(v.pricePerKm),
+      (fuel === "Any fuel" || v.fuel === fuel),
   );
 
   return (
@@ -94,18 +85,6 @@ export default function FleetExplorer({ vehicles }: { vehicles: Vehicle[] }) {
         >
           {fuels.map((f) => (
             <option key={f}>{f}</option>
-          ))}
-        </select>
-        <select
-          value={priceBand}
-          onChange={(e) => setPriceBand(Number(e.target.value))}
-          className={selectCls}
-          aria-label="Price"
-        >
-          {priceBands.map((b, i) => (
-            <option key={b.label} value={i}>
-              {b.label}
-            </option>
           ))}
         </select>
       </div>

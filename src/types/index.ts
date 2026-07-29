@@ -22,11 +22,7 @@ export interface Vehicle {
   luggage: number;
   fuel: Fuel;
   transmission: Transmission;
-  pricePerKm: number;
   minKmPerDay: number;
-  driverAllowancePerDay: number;
-  airportTransferFare: number;
-  localPackageFare: number; // 8 hr / 80 km package
   image: string;
   gallery: string[];
   tagline: string;
@@ -58,8 +54,6 @@ export interface RouteInfo {
   duration: string;
   description: string;
   longDescription: string[];
-  oneWayFareFrom: number;
-  roundTripFareFrom: number;
   attractions: { name: string; note: string }[];
   recommendedVehicleSlugs: string[];
   faqs: FAQ[];

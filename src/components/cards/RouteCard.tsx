@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { RouteInfo } from "@/types";
-import { formatINR } from "@/lib/site";
 
 export default function RouteCard({ route }: { route: RouteInfo }) {
   return (
@@ -33,9 +32,9 @@ export default function RouteCard({ route }: { route: RouteInfo }) {
       </p>
       <div className="mt-4 flex items-center justify-between border-t border-line pt-4">
         <p className="text-sm text-ink-soft">
-          Round trip from{" "}
+          One way &amp; round trip{" "}
           <span className="font-display font-semibold text-primary">
-            {formatINR(route.roundTripFareFrom)}
+            quoted on WhatsApp
           </span>
         </p>
         <span className="text-sm font-semibold text-primary transition group-hover:translate-x-1">

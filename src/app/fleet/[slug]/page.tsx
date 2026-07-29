@@ -10,7 +10,7 @@ import ContactCta from "@/sections/ContactCta";
 import EnquiryForm from "@/components/EnquiryForm";
 import { getVehicle, getVehicles } from "@/lib/data";
 import { buildMetadata, faqJsonLd } from "@/lib/seo";
-import { formatINR, site, whatsappLink } from "@/lib/site";
+import { site, whatsappLink } from "@/lib/site";
 
 type Params = { slug: string };
 
@@ -28,7 +28,7 @@ export async function generateMetadata({
   if (!vehicle) return {};
   return buildMetadata({
     title: `${vehicle.name} for Rent in Hyderabad with Driver`,
-    description: `Book the ${vehicle.name} with chauffeur in Hyderabad — ${vehicle.seats} seats, ${vehicle.fuel}, from ₹${vehicle.pricePerKm}/km outstation. Transparent fares, verified drivers.`,
+    description: `Book the ${vehicle.name} with chauffeur in Hyderabad — ${vehicle.seats} seats, ${vehicle.fuel}, available for airport, local and outstation trips. Itemised quote on WhatsApp, verified drivers.`,
     path: `/fleet/${vehicle.slug}`,
   });
 }
@@ -54,17 +54,17 @@ export default async function VehiclePage({
   const pricing = [
     {
       label: "Outstation",
-      value: `${formatINR(vehicle.pricePerKm)}/km`,
-      note: `+ ${formatINR(vehicle.driverAllowancePerDay)}/day driver allowance`,
+      value: "On request",
+      note: "Per km + driver allowance per day",
     },
     {
       label: "Local package",
-      value: formatINR(vehicle.localPackageFare),
+      value: "On request",
       note: "8 hours / 80 km",
     },
     {
       label: "Airport transfer",
-      value: `from ${formatINR(vehicle.airportTransferFare)}`,
+      value: "On request",
       note: "RGIA ↔ city, tolls itemised",
     },
   ];
@@ -81,8 +81,6 @@ export default async function VehiclePage({
           brand: { "@type": "Brand", name: site.name },
           offers: {
             "@type": "Offer",
-            priceCurrency: "INR",
-            price: vehicle.airportTransferFare,
             availability: "https://schema.org/InStock",
             url: `${site.url}/fleet/${vehicle.slug}`,
           },
@@ -184,6 +182,10 @@ export default async function VehiclePage({
               <p className="font-display text-lg font-semibold text-ink">
                 Pricing
               </p>
+              <p className="mt-1 text-sm text-ink-soft">
+                Rates change with fuel, season and route — tell us the trip and
+                we send an itemised quote on WhatsApp.
+              </p>
               <dl className="mt-4 space-y-4">
                 {pricing.map((p) => (
                   <div
@@ -196,7 +198,7 @@ export default async function VehiclePage({
                       </dt>
                       <dd className="text-xs text-ink-faint">{p.note}</dd>
                     </div>
-                    <p className="font-display text-lg font-semibold text-primary">
+                    <p className="font-display text-sm font-semibold text-primary">
                       {p.value}
                     </p>
                   </div>
