@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { site, whatsappLink, defaultWhatsappMessage } from "@/lib/site";
 import { getRoutes, getServices } from "@/lib/data";
@@ -10,9 +11,20 @@ export default async function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
-            <p className="font-display text-xl font-semibold">
-              Srinivasa Travels
-            </p>
+            <Link href="/" className="flex w-fit items-center gap-3">
+              <span className="logo-shimmer">
+                <Image
+                  src="/brand/srinivasa-logo.png"
+                  alt=""
+                  width={330}
+                  height={192}
+                  className="h-14 w-auto"
+                />
+              </span>
+              <span className="font-display text-xl font-semibold">
+                {site.name}
+              </span>
+            </Link>
             <span className="pinstripe mt-3" aria-hidden />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/65">
               Chauffeur-driven car rentals in Hyderabad since{" "}

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -38,21 +39,23 @@ export default function Navbar() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:h-[72px] lg:px-8">
         <Link href="/" className="flex items-center gap-2.5">
-          <span
-            className={`grid size-9 place-items-center rounded-btn font-display text-lg font-bold ${
-              solid ? "bg-primary text-white" : "bg-white/15 text-white"
-            }`}
-            aria-hidden
-          >
-            S
+          <span className="logo-shimmer">
+            <Image
+              src="/brand/srinivasa-logo.png"
+              alt=""
+              width={330}
+              height={192}
+              priority
+              className="h-10 w-auto lg:h-12"
+            />
           </span>
           <span className="leading-tight">
             <span
-              className={`block font-display text-[15px] font-semibold tracking-wide ${
+              className={`block font-display text-[15px] font-semibold tracking-wide lg:text-base ${
                 solid ? "text-ink" : "text-white"
               }`}
             >
-              Srinivasa Travels
+              {site.name}
             </span>
             <span
               className={`block text-[10px] uppercase tracking-[0.2em] ${
