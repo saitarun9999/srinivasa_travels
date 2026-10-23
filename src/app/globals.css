@@ -141,3 +141,64 @@ h4 {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
+
+/* Gold shimmer sweeping across hero accent text */
+.text-shimmer {
+  background: linear-gradient(
+    100deg,
+    var(--color-accent) 0%,
+    var(--color-accent) 40%,
+    #fff1c2 50%,
+    var(--color-accent) 60%,
+    var(--color-accent) 100%
+  );
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 5s ease-in-out infinite;
+}
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  60%,
+  100% {
+    background-position: 0% 0;
+  }
+}
+
+/* 3D tilt cards (see TiltCard) */
+.tilt-wrap {
+  perspective: 1100px;
+}
+.tilt {
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+.tilt[data-tilting] {
+  transition: transform 0.08s linear;
+}
+.tilt-glare {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-card);
+  background: radial-gradient(
+    circle at var(--gx, 50%) var(--gy, 0%),
+    rgb(255 255 255 / 0.35),
+    transparent 45%
+  );
+  mix-blend-mode: soft-light;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.tilt[data-tilting] .tilt-glare {
+  opacity: 1;
+}
+/* Lift a child off the card plane while tilting */
+.tilt-pop {
+  transform: translateZ(28px);
+}

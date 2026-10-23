@@ -25,6 +25,8 @@ export interface Vehicle {
   minKmPerDay: number;
   image: string;
   gallery: string[];
+  /** Attribution for freely licensed photos (e.g. Wikimedia Commons). */
+  imageCredit?: { author: string; license: string; source: string };
   tagline: string;
   description: string;
   features: string[];

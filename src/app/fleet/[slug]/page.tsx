@@ -5,6 +5,7 @@ import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Button from "@/components/ui/Button";
 import JsonLd from "@/components/ui/JsonLd";
+import ImageDisclaimer from "@/components/ui/ImageDisclaimer";
 import FaqSection from "@/sections/FaqSection";
 import ContactCta from "@/sections/ContactCta";
 import EnquiryForm from "@/components/EnquiryForm";
@@ -114,7 +115,22 @@ export default async function VehiclePage({
                 sizes="(max-width: 1024px) 100vw, 60vw"
                 className="object-cover"
               />
+              <ImageDisclaimer large />
             </div>
+            {vehicle.imageCredit && (
+              <p className="mt-2 text-[11px] text-ink-faint">
+                Representative photo:{" "}
+                <a
+                  href={vehicle.imageCredit.source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline decoration-dotted hover:text-ink-soft"
+                >
+                  {vehicle.imageCredit.author}
+                </a>
+                , {vehicle.imageCredit.license}, via Wikimedia Commons
+              </p>
+            )}
 
             <h2 className="mt-10 font-display text-2xl font-semibold text-ink">
               Overview

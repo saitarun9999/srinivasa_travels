@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Hero from "@/sections/Hero";
+import Hero, { HeroQuote } from "@/sections/Hero";
 import FeaturedVehicles from "@/sections/FeaturedVehicles";
 import WhyChooseUs from "@/sections/WhyChooseUs";
 import ServicesSection from "@/sections/ServicesSection";
@@ -32,6 +32,7 @@ export default async function HomePage() {
   return (
     <>
       <Hero />
+      <HeroQuote />
       <FeaturedVehicles />
       <WhyChooseUs />
       <ServicesSection />
