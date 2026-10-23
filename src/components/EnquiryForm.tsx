@@ -12,8 +12,9 @@ const tripTypes = [
   "Corporate",
 ];
 
+// 16px text on phones stops iOS zooming into the field on focus.
 const inputCls =
-  "w-full rounded-btn border border-line bg-white px-4 py-3 text-sm text-ink placeholder:text-ink-faint focus:border-primary focus:outline-none";
+  "field block w-full rounded-btn border border-line bg-white px-4 py-3 text-base text-ink placeholder:text-ink-faint focus:border-primary focus:outline-none sm:text-sm";
 
 /**
  * Quick enquiry widget. Composes a structured WhatsApp message — the
@@ -105,7 +106,7 @@ export default function EnquiryForm({
             ))}
           </select>
         </div>
-        <div>
+        <div className="relative">
           <label htmlFor="enq-date" className="sr-only">
             Travel date
           </label>
@@ -114,9 +115,19 @@ export default function EnquiryForm({
             value={travelDate}
             onChange={(e) => setTravelDate(e.target.value)}
             type="date"
-            className={inputCls}
+            className={`peer ${inputCls}`}
+            data-empty={travelDate ? undefined : ""}
             aria-label="Travel date"
           />
+          {/* Date inputs ignore `placeholder`, so draw one while empty. */}
+          {!travelDate && (
+            <span
+              aria-hidden
+              className="pointer-events-none absolute inset-y-0 left-4 flex items-center text-base text-ink-faint peer-focus:hidden sm:text-sm"
+            >
+              Travel date
+            </span>
+          )}
         </div>
       </div>
       <div>

@@ -202,3 +202,28 @@ h4 {
 .tilt-pop {
   transform: translateZ(28px);
 }
+
+/* Form fields: tame native date/select chrome on mobile (iOS Safari gives the
+   date input an intrinsic min-width, centred text and no placeholder). */
+.field {
+  -webkit-appearance: none;
+  appearance: none;
+  min-width: 0;
+  min-height: 48px;
+}
+.field::-webkit-date-and-time-value {
+  text-align: left;
+}
+.field::-webkit-calendar-picker-indicator {
+  opacity: 0.55;
+}
+/* Empty date: hide the dd/mm/yyyy mask until focused; a label shows instead. */
+.field[data-empty]:not(:focus)::-webkit-datetime-edit {
+  color: transparent;
+}
+select.field {
+  padding-right: 2.5rem;
+  background: #fff
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2306294f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")
+    no-repeat right 0.9rem center / 1rem;
+}
