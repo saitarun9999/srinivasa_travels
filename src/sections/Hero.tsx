@@ -12,7 +12,7 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-svh items-center overflow-hidden bg-primary-night text-white">
+    <section className="relative flex min-h-svh flex-col overflow-hidden bg-primary-night text-white lg:flex-row lg:items-center">
       {/* Layered night-highway backdrop */}
       <div
         aria-hidden
@@ -26,9 +26,10 @@ export default function Hero() {
         aria-hidden
         className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:56px_56px] [mask-image:radial-gradient(70%_60%_at_50%_40%,black,transparent)]"
       />
-      <HeroCanvas className="absolute inset-x-0 bottom-0 h-[44svh] [mask-image:linear-gradient(to_bottom,transparent,black_22%)] lg:inset-y-0 lg:left-auto lg:right-0 lg:h-auto lg:w-[64%] lg:[mask-image:linear-gradient(to_right,transparent,black_28%)]" />
+      {/* Mobile: car scene sits above the copy. Desktop: fills the right side. */}
+      <HeroCanvas className="relative mt-16 h-[38svh] w-full [mask-image:linear-gradient(to_bottom,black_75%,transparent)] lg:absolute lg:inset-y-0 lg:right-0 lg:mt-0 lg:h-auto lg:w-[64%] lg:[mask-image:linear-gradient(to_right,transparent,black_28%)]" />
 
-      <div className="pointer-events-none relative mx-auto w-full max-w-7xl px-4 pb-[46svh] pt-32 sm:px-6 lg:px-8 lg:pb-40 lg:pt-40">
+      <div className="pointer-events-none relative mx-auto w-full max-w-7xl px-4 pb-32 pt-2 sm:px-6 lg:px-8 lg:pb-40 lg:pt-40">
         <div className="pointer-events-auto max-w-2xl animate-fade-up">
           <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium tracking-wide text-white/80 backdrop-blur">
             <span className="relative flex size-1.5" aria-hidden>
